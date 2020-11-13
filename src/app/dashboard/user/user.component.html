@@ -7,11 +7,18 @@
 
         <div class="col-md-8 col-sm-12 col-xs-12 mt-4">
             <div class="row d-flex justify-content-center">
-                <div class="col-6 text-center" [ngClass]="{active: reposSelected}" (click)="showRepos()">repos <span>{{numeroRepos}}</span></div>
-                <div class="col-6 text-center" [ngClass]="{active: starredSelected}" (click)="showStarred()">Starred</div>
+                <div class="col-6 text-center link" [ngClass]="{active: reposSelected}" (click)="showRepos()">
+                    <div>Repos</div>
+                    <div class="numbers"> {{numeroRepos}}</div>
+                </div>
+                <div class="col-6 text-center link" [ngClass]="{active: starredSelected}" (click)="showStarred()">
+                    <div>Starred</div>
+                    <div class="numbers"> {{numeroFavoritos}}</div>
+                </div>
             </div>
 
             <app-repositories *ngIf="reposSelected" (numeroRepositorios)="recebeNumeroRepos($event)"></app-repositories>
+            <app-starred *ngIf="starredSelected" (numeroFavoritos)="recebeNumeroFavoritos($event)"></app-starred>
         </div>
 
     </div>

@@ -1,0 +1,31 @@
+.user {
+    display: flex;
+    img {
+        max-height: 60px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+    .user-profile{
+        h4{
+
+        }
+        p{
+            color: #666666;
+        }
+    }
+}
+
+@include desktop {
+    .user {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            max-height: 180px;
+        }
+    }
+    .user-profile {
+        text-align: center;
+        margin-top: 18px;
+    }
+}

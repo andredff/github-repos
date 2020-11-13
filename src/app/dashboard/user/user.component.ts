@@ -4,7 +4,6 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
 
@@ -13,6 +12,8 @@ export class UserComponent implements OnInit {
   public starredSelected = false;
 
   public numeroRepos;
+
+  public numeroFavoritos;
 
   public repositories;
 
@@ -41,6 +42,11 @@ export class UserComponent implements OnInit {
   recebeNumeroRepos(repos) {
     console.log('repos', repos);
     this.numeroRepos = repos;
+  }
+
+  recebeNumeroFavoritos(favs) {
+    console.log('favs', favs);
+    this.numeroFavoritos = favs;
   }
 
 }

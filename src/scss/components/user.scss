@@ -1,0 +1,19 @@
+.active {
+    border-bottom: 5px solid #e36209;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    div {
+        margin: 12px 4px;
+    }
+}
+
+.numbers {
+    background-color: #d8d8d8;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}

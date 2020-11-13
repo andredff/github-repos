@@ -1,0 +1,13 @@
+
+.navbar {
+    background-color: $secondaryColor;
+    .navbar-brand {
+        img {
+            margin: 0 12px;
+        }
+        span {
+            color: $whiteColor;
+        }
+    }
+
+}

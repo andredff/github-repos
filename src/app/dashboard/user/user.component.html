@@ -1,10 +1,8 @@
 <div class="container mt-4">
     <div class="row">
-
         <div class="col-md-4 col-sm-12 col-xs-12">
             <app-profile></app-profile>
         </div>
-
         <div class="col-md-8 col-sm-12 col-xs-12 mt-4">
             <div class="row d-flex justify-content-center">
                 <div class="col-6 text-center link" [ngClass]="{active: reposSelected}" (click)="showRepos()">
@@ -16,9 +14,8 @@
                     <div class="numbers"> {{numeroFavoritos}}</div>
                 </div>
             </div>
-
-            <app-repositories *ngIf="reposSelected" (numeroRepositorios)="recebeNumeroRepos($event)"></app-repositories>
-            <app-starred *ngIf="starredSelected" (numeroFavoritos)="recebeNumeroFavoritos($event)"></app-starred>
+            <app-repositories *ngIf="reposSelected" [repositories]="repositories"></app-repositories>
+            <app-starred *ngIf="starredSelected" [starreds]="starreds"></app-starred>
         </div>
 
     </div>

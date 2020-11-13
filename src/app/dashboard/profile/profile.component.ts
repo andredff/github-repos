@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  public user;
+  public user: any;
 
   constructor(private userService: UserService) { }
 
@@ -18,8 +18,7 @@ export class ProfileComponent implements OnInit {
   getUser() {
     this.userService.getUser().subscribe(user => {
       this.user = user;
-      console.log(user);
-    })
+    });
   }
 
 }

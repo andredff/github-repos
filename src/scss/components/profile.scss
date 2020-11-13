@@ -15,6 +15,21 @@
     }
 }
 
+@include tablet {
+    .user {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            max-height: 180px;
+        }
+    }
+    .user-profile {
+        text-align: center;
+        margin-top: 18px;
+    }
+}
+
 @include desktop {
     .user {
         display: flex;

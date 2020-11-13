@@ -11,15 +11,19 @@ export class UserComponent implements OnInit {
 
   public starredSelected = false;
 
-  public numeroRepos;
+  public numeroRepos: any;
 
-  public numeroFavoritos;
+  public numeroFavoritos: any;
 
-  public repositories;
+  public repositories: any;
+
+  public starreds: any;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getStarreds();
+    this.getRepos();
   }
 
   showRepos() {
@@ -35,18 +39,15 @@ export class UserComponent implements OnInit {
   getRepos() {
     this.userService.getRepositories().subscribe(repos => {
       this.repositories = repos;
-      console.log(this.repositories);
+      this.numeroRepos = this.repositories.length;
     });
   }
 
-  recebeNumeroRepos(repos) {
-    console.log('repos', repos);
-    this.numeroRepos = repos;
-  }
-
-  recebeNumeroFavoritos(favs) {
-    console.log('favs', favs);
-    this.numeroFavoritos = favs;
+  getStarreds() {
+    this.userService.getStarred().subscribe(starred => {
+      this.starreds = starred;
+      this.numeroFavoritos = this.starreds.length;
+    });
   }
 
 }

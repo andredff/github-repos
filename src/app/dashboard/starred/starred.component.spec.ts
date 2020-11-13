@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideProfileComponent } from './side-profile.component';
+import { StarredComponent } from './starred.component';
 
-describe('SideProfileComponent', () => {
-  let component: SideProfileComponent;
-  let fixture: ComponentFixture<SideProfileComponent>;
+describe('StarredComponent', () => {
+  let component: StarredComponent;
+  let fixture: ComponentFixture<StarredComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideProfileComponent ]
+      declarations: [ StarredComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SideProfileComponent);
+    fixture = TestBed.createComponent(StarredComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,18 @@
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-<p>user works!</p>
-asd
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <app-profile></app-profile>
+        </div>
+
+        <div class="col-md-8 col-sm-12 col-xs-12 mt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 text-center" [ngClass]="{active: reposSelected}" (click)="showRepos()">repos <span>{{numeroRepos}}</span></div>
+                <div class="col-6 text-center" [ngClass]="{active: starredSelected}" (click)="showStarred()">Starred</div>
+            </div>
+
+            <app-repositories *ngIf="reposSelected" (numeroRepositorios)="recebeNumeroRepos($event)"></app-repositories>
+        </div>
+
+    </div>
+</div>
